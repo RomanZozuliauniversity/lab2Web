@@ -1,46 +1,61 @@
-/* Псевдокласи */
-:root{
-background-color: antiquewhite;
-}
-p:before {
-	content: "До тексту: ";
-}
-p:after {
-	content: " Після тексту.";
+:root {
+	background-color: rgba(134, 203, 250, 0.646);
 }
 
-/* Анімація */
+
+/* рамка */
 @keyframes change-border {
-	0% { border: 1px solid black; }
-	50% { border: 3px solid blue; }
-	100% { border: 1px solid black; }
+	0% {
+		border: 1px solid black;
+	}
+
+	50% {
+		border: 3px solid blue;
+	}
+
+	100% {
+		border: 1px solid black;
+	}
 }
+
 .links {
 	border: 1px solid black;
-    width: 270px;
-    height: 90px;
 	animation: change-border 3s infinite;
-    display: flex;
+	width: 170px;
+	height: 120px;
+	margin: 10px;
 }
 
 /* Вирівнювання в флекс моделі */
 .container {
 	display: flex;
-	flex-direction: column;
+
 	align-items: center;
 	justify-content: center;
+
 }
 
 /* Лінійний градієнт */
-h1 {
-	background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+h1,
+h3,
+h4 {
+	background: linear-gradient(to right, red, orange, rgb(206, 237, 165), green, blue, indigo, violet);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
 /* 3D трансформація */
 img {
-	transform: rotateY(45deg);
+	width: 480px;
+	object-fit:cover ;
+	transform: rotate(0.0turn);
+	/*transform: matrix(1, 2, 3, 4, 5, 6);
+	transform: translate(120px, 50%);
+	transform: scale(2, 0.5);
+	transform: skew(30deg, 20deg);
+	transform: scale(0.5) translate(-100%, -100%);*/
+
+
 }
 
 /* Відносне позиціювання */
@@ -53,14 +68,18 @@ img {
 /* Фіксоване позиціювання */
 .fixed {
 	position: fixed;
-	top: 10px;
-	right: 10px;
+	top: 20px;
+	right: 0px;
 }
 
 /* Застосування стилів до Html документу */
 table {
 	border-collapse: collapse;
 }
+
 td {
-	padding: 10px;
+	padding: 20px;
+}
+.hiddenflied{
+	opacity: 0.2;
 }
