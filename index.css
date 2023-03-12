@@ -1,9 +1,12 @@
 :root {
 	background-color: rgba(134, 203, 250, 0.646);
 }
-
-
-/* рамка */
+.factaboutdachshund::before{
+	content: " The dachshund"
+}
+.factaboutdachshund::after{
+	content:"The standard-sized dachshund was developed to scent, chase, and flush out badgers and other burrow-dwelling animals.The miniature dachshund was bred to hunt small animals such as rabbits."
+}
 @keyframes change-border {
 	0% {
 		border: 1px solid black;
@@ -24,55 +27,46 @@
 	width: 170px;
 	height: 120px;
 	margin: 10px;
+	position: fixed;
+	top: 500px;
+	right: 0px;
 }
 
-/* Вирівнювання в флекс моделі */
+
+
 .container {
 	display: flex;
-
 	align-items: center;
 	justify-content: center;
 
 }
 
-/* Лінійний градієнт */
-h1,
-h3,
-h4 {
+
+h1,h3,h4 {
 	background: linear-gradient(to right, red, orange, rgb(206, 237, 165), green, blue, indigo, violet);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
-/* 3D трансформація */
+
 img {
-	width: 480px;
-	object-fit:cover ;
-	transform: rotate(0.0turn);
+	width:560px;
+	height:315px;
+	transform: rotate(0.5turn);
 	/*transform: matrix(1, 2, 3, 4, 5, 6);
 	transform: translate(120px, 50%);
 	transform: scale(2, 0.5);
 	transform: skew(30deg, 20deg);
 	transform: scale(0.5) translate(-100%, -100%);*/
-
-
 }
 
-/* Відносне позиціювання */
-.relative {
+.hiddenflied {
 	position: relative;
 	top: 20px;
 	left: 20px;
 }
 
-/* Фіксоване позиціювання */
-.fixed {
-	position: fixed;
-	top: 20px;
-	right: 0px;
-}
 
-/* Застосування стилів до Html документу */
 table {
 	border-collapse: collapse;
 }
